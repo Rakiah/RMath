@@ -37,6 +37,7 @@ t_matrix4f		*m4f_cpy(t_matrix4f *dst, t_matrix4f *src);
 t_matrix4f		*m4f_new();
 t_matrix4f		*m4f_mul(t_matrix4f *m1, t_matrix4f *m2);
 t_matrix4f		*m4f_mul_new(t_matrix4f *m1, t_matrix4f *m2);
+t_vector4f		m4f_mul_vector(t_matrix4f *m, t_vector4f *v)
 /*
 **	VECTOR4F METHODS
 */

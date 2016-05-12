@@ -36,14 +36,29 @@ t_matrix4f	*m4f_mul(t_matrix4f *m1, t_matrix4f *m2)
 		while (y < 4)
 		{
 			m1->m[x][y] = tmp.m[x][0] * m2->m[0][y] +
-							tmp.m[x][1] * m2->m[1][y] +
-							tmp.m[x][2] * m2->m[2][y] +
-							tmp.m[x][3] * m2->m[3][y];
+					tmp.m[x][1] * m2->m[1][y] +
+					tmp.m[x][2] * m2->m[2][y] +
+					tmp.m[x][3] * m2->m[3][y];
 			y++;
 		}
 		x++;
 	}
 	return (m1);
+}
+
+t_vector4f	m4f_mul_vector(t_matrix4f *m, t_vector4f *v)
+{
+	t_vector4f ret;
+
+	ret.x = m->m[0][0] * v->x + m->m[0][1] *
+	v->y + m->m[0][2] * v->z + m->m[0][3] * v->w;
+	ret.y = m->m[1][0] * v->x + m->m[1][1] *
+	v->y + m->m[1][2] * v->z + m->m[1][3] * v->w;
+	ret.z = m->m[2][0] * v->x + m->m[2][1] *
+	v->y + m->m[2][2] * v->z + m->m[2][3] * v->w;
+	ret.w = m->m[3][0] * v->x + m->m[3][1] *
+	v->y + m->m[3][2] * v->z + m->m[3][3] * v->w;
+	return (ret);
 }
 
 t_matrix4f	*m4f_cpy(t_matrix4f *dst, t_matrix4f *src)
