@@ -50,16 +50,19 @@ M4F = $(PATH_M4F)m4f_manipulations.c \
 V4F = $(PATH_V4F)v4f_manipulations.c \
       $(PATH_V4F)v4f_operators.c \
       $(PATH_V4F)v4f_operators_new.c \
+      $(PATH_V4F)v4f_operators_float.c \
       $(PATH_V4F)v4f_utils.c
 
 V3F = $(PATH_V3F)v3f_manipulations.c \
       $(PATH_V3F)v3f_operators.c \
       $(PATH_V3F)v3f_operators_new.c \
+      $(PATH_V3F)v3f_operators_float.c \
       $(PATH_V3F)v3f_utils.c
 
 V2F = $(PATH_V2F)v2f_manipulations.c \
       $(PATH_V2F)v2f_operators.c \
       $(PATH_V2F)v2f_operators_new.c \
+      $(PATH_V2F)v2f_operators_float.c \
       $(PATH_V2F)v2f_utils.c
 
 SOURCES = $(M4F)
