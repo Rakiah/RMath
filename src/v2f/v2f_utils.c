@@ -12,35 +12,18 @@
 
 #include "rmath.h"
 
-void		v2f_set(t_vector2f *v, float x, float y)
-{
-	v->x = x;
-	v->y = y;
-}
-
-void		v2f_cpy(t_vector2f *dst, t_vector2f *src)
-{
-	dst->x = src->x;
-	dst->y = src->y;
-}
-
 t_vector2f	*v2f_new_cpy(t_vector2f *src)
 {
 	return (v2f_new(src->x, src->y));
 }
 
-t_vector2f	*v2f_lerp(t_vector2f *v1,
-			t_vector2f *v2,
-			t_vector2f *dst,
-			float lerp_factor)
+t_vector2f	v2f_lerp(t_vector2f v1, t_vector2f v2, float l)
 {
 	t_vector2f tmp;
 
-	v2f_cpy(&tmp, v2);
-	v2f_sub(&tmp, v1);
-	tmp.x *= lerp_factor;
-	tmp.y *= lerp_factor;
-	v2f_add(&tmp, v1);
-	v2f_cpy(dst, &tmp);
-	return (dst);
+	tmp = v2f_sub(v2, v1);
+	tmp.x *= l;
+	tmp.y *= l;
+	tmp = v2f_add(tmp, v1);
+	return (tmp);
 }

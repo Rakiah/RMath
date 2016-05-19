@@ -24,34 +24,22 @@ t_vector4f	*v4f_new(float x, float y, float z, float w)
 	return (ret);
 }
 
-t_vector4f	*v4f_add_new(t_vector4f *v1, t_vector4f *v2)
+t_vector4f	*v4f_add_new(t_vector4f v1, t_vector4f v2)
 {
-	return (v4f_new(v1->x + v2->x,
-					v1->y + v2->y,
-					v1->z + v2->z,
-					v1->w + v2->w));
+	return (v4f_new(v1.x + v2.x, v1.y + v2.y, v1.z + v2.z, v1.w + v2.w));
 }
 
-t_vector4f	*v4f_sub_new(t_vector4f *v1, t_vector4f *v2)
+t_vector4f	*v4f_sub_new(t_vector4f v1, t_vector4f v2)
 {
-	return (v4f_new(v1->x - v2->x,
-					v1->y - v2->y,
-					v1->z - v2->z,
-					v1->w - v2->w));
+	return (v4f_new(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z, v1.w - v2.w));
 }
 
-t_vector4f	*v4f_mul_new(t_vector4f *v1, t_vector4f *v2)
+t_vector4f	*v4f_mul_new(t_vector4f v1, t_vector4f v2)
 {
-	return (v4f_new(v1->x * v2->x,
-					v1->y * v2->y,
-					v1->z * v2->z,
-					v1->w * v2->w));
+	return (v4f_new(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z, v1.w * v2.w));
 }
 
-t_vector4f	*v4f_div_new(t_vector4f *v1, t_vector4f *v2)
+t_vector4f	*v4f_div_new(t_vector4f v1, t_vector4f v2)
 {
-	return (v4f_new(v1->x / v2->x,
-					v1->y / v2->y,
-					v1->z / v2->z,
-					v1->w / v2->w));
+	return (v4f_new(v1.x / v2.x, v1.y / v2.y, v1.z / v2.z, v1.w / v2.w));
 }

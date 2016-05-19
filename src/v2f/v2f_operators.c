@@ -12,26 +12,22 @@
 
 #include "rmath.h"
 
-void		v2f_add(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	v2f_add(t_vector2f v1, t_vector2f v2)
 {
-	v1->x += v2->x;
-	v1->y += v2->y;
+	return ((t_vector2f) { v1.x + v2.x, v1.y + v2.y });
 }
 
-void		v2f_sub(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	v2f_sub(t_vector2f v1, t_vector2f v2)
 {
-	v1->x -= v2->x;
-	v1->y -= v2->y;
+	return ((t_vector2f) { v1.x - v2.x, v1.y - v2.y });
 }
 
-void		v2f_mul(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	v2f_mul(t_vector2f v1, t_vector2f v2)
 {
-	v1->x *= v2->x;
-	v1->y *= v2->y;
+	return ((t_vector2f) { v1.x * v2.x, v1.y * v2.y });
 }
 
-void		v2f_div(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	v2f_div(t_vector2f v1, t_vector2f v2)
 {
-	v1->x /= v2->x;
-	v1->y /= v2->y;
+	return ((t_vector2f) { v1.x / v2.x, v1.y / v2.y });
 }

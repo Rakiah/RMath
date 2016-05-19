@@ -12,27 +12,36 @@
 
 #include "rmath.h"
 
-float		v2f_length(t_vector2f *vector)
+float		v2f_length(t_vector2f vector)
 {
-	return ((float)sqrt(vector->x * vector->x + vector->y * vector->y));
+	return ((float)sqrt(vector.x * vector.x + vector.y * vector.y));
 }
 
-float		v2f_dot(t_vector2f *v1, t_vector2f *v2)
+float		v2f_dot(t_vector2f v1, t_vector2f v2)
 {
-	return (v1->x * v2->x +
-			v1->y * v2->y);
+	return (v1.x * v2.x + v1.y * v2.y);
+}
+
+t_vector2f	v2f_normalized(t_vector2f vector)
+{
+	float length;
+
+	length = v2f_length(vector);
+	vector.x /= length;
+	vector.y /= length;
+	return (vector);
 }
 
 void		v2f_normalize(t_vector2f *vector)
 {
 	float length;
 
-	length = v2f_length(vector);
+	length = v2f_length(*vector);
 	vector->x /= length;
 	vector->y /= length;
 }
 
-void		v2f_rotate(t_vector2f *vector, float angle)
+t_vector2f	v2f_rotate(t_vector2f vector, float angle)
 {
 	float rad;
 	float cosf;
@@ -41,6 +50,7 @@ void		v2f_rotate(t_vector2f *vector, float angle)
 	rad = angle * PI / 180.0f;
 	cosf = (float)cos(rad);
 	sinf = (float)sin(rad);
-	vector->x = vector->x * cosf - vector->y * sinf;
-	vector->y = vector->x * sinf + vector->y * cosf;
+	vector.x = vector.x * cosf - vector.y * sinf;
+	vector.y = vector.x * sinf + vector.y * cosf;
+	return (vector);
 }

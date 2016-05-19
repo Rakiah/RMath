@@ -22,22 +22,22 @@ t_vector2f	*v2f_new(float x, float y)
 	return (ret);
 }
 
-t_vector2f	*v2f_add_new(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	*v2f_add_new(t_vector2f v1, t_vector2f v2)
 {
-	return (v2f_new(v1->x + v2->x, v1->y + v2->y));
+	return (v2f_new(v1.x + v2.x, v1.y + v2.y));
 }
 
-t_vector2f	*v2f_sub_new(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	*v2f_sub_new(t_vector2f v1, t_vector2f v2)
 {
-	return (v2f_new(v1->x - v2->x, v1->y - v2->y));
+	return (v2f_new(v1.x - v2.x, v1.y - v2.y));
 }
 
-t_vector2f	*v2f_mul_new(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	*v2f_mul_new(t_vector2f v1, t_vector2f v2)
 {
-	return (v2f_new(v1->x * v2->x, v1->y * v2->y));
+	return (v2f_new(v1.x * v2.x, v1.y * v2.y));
 }
 
-t_vector2f	*v2f_div_new(t_vector2f *v1, t_vector2f *v2)
+t_vector2f	*v2f_div_new(t_vector2f v1, t_vector2f v2)
 {
-	return (v2f_new(v1->x / v2->x, v1->y / v2->y));
+	return (v2f_new(v1.x / v2.x, v1.y / v2.y));
 }

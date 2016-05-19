@@ -12,30 +12,22 @@
 
 #include "rmath.h"
 
-void		v3f_add(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	v3f_add(t_vector3f v1, t_vector3f v2)
 {
-	v1->x += v2->x;
-	v1->y += v2->y;
-	v1->z += v2->z;
+	return ((t_vector3f) { v1.x + v2.x, v1.y + v2.y, v1.z + v2.z });
 }
 
-void		v3f_sub(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	v3f_sub(t_vector3f v1, t_vector3f v2)
 {
-	v1->x -= v2->x;
-	v1->y -= v2->y;
-	v1->z -= v2->z;
+	return ((t_vector3f) { v1.x - v2.x, v1.y - v2.y, v1.z - v2.z });
 }
 
-void		v3f_mul(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	v3f_mul(t_vector3f v1, t_vector3f v2)
 {
-	v1->x *= v2->x;
-	v1->y *= v2->y;
-	v1->z *= v2->z;
+	return ((t_vector3f) { v1.x * v2.x, v1.y * v2.y, v1.z * v2.z });
 }
 
-void		v3f_div(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	v3f_div(t_vector3f v1, t_vector3f v2)
 {
-	v1->x /= v2->x;
-	v1->y /= v2->y;
-	v1->z /= v2->z;
+	return ((t_vector3f) { v1.x / v2.x, v1.y / v2.y, v1.z / v2.z });
 }

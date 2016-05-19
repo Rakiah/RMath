@@ -59,7 +59,7 @@ void	m4f_rotate(t_matrix4f *matrix, t_vector3f r)
 }
 
 void	m4f_perspective(t_matrix4f *m, float degfov,
-			t_vector2f screen, t_vector2f frustum)
+						t_vector2f screen, t_vector2f frustum)
 {
 	float	fov_rad;
 	float	fov;

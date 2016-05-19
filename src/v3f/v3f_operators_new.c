@@ -23,30 +23,22 @@ t_vector3f	*v3f_new(float x, float y, float z)
 	return (ret);
 }
 
-t_vector3f	*v3f_add_new(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	*v3f_add_new(t_vector3f v1, t_vector3f v2)
 {
-	return (v3f_new(v1->x + v2->x,
-			v1->y + v2->y,
-			v1->z + v2->z));
+	return (v3f_new(v1.x + v2.x, v1.y + v2.y, v1.z + v2.z));
 }
 
-t_vector3f	*v3f_sub_new(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	*v3f_sub_new(t_vector3f v1, t_vector3f v2)
 {
-	return (v3f_new(v1->x - v2->x,
-			v1->y - v2->y,
-			v1->z - v2->z));
+	return (v3f_new(v1.x - v2.x, v1.y - v2.y, v1.z - v2.z));
 }
 
-t_vector3f	*v3f_mul_new(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	*v3f_mul_new(t_vector3f v1, t_vector3f v2)
 {
-	return (v3f_new(v1->x * v2->x,
-			v1->y * v2->y,
-			v1->z * v2->z));
+	return (v3f_new(v1.x * v2.x, v1.y * v2.y, v1.z * v2.z));
 }
 
-t_vector3f	*v3f_div_new(t_vector3f *v1, t_vector3f *v2)
+t_vector3f	*v3f_div_new(t_vector3f v1, t_vector3f v2)
 {
-	return (v3f_new(v1->x / v2->x,
-			v1->y / v2->y,
-			v1->z / v2->z));
+	return (v3f_new(v1.x / v2.x, v1.y / v2.y, v1.z / v2.z));
 }
