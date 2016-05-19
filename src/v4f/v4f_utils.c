@@ -29,3 +29,14 @@ t_vector4f	v4f_lerp(t_vector4f v1, t_vector4f v2, float lerp_factor)
 	tmp = v4f_add(tmp, v1);
 	return (tmp);
 }
+
+void		v4f_normalize(t_vector4f *vector)
+{
+	float length;
+
+	length = v4f_length(*vector);
+	vector->x /= length;
+	vector->y /= length;
+	vector->z /= length;
+	vector->w /= length;
+}

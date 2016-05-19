@@ -58,14 +58,3 @@ t_vector4f v4f_cross(t_vector4f v1, t_vector4f v2)
 							v1.x * v2.y - v1.y * v2.x,
 							v1.y * v2.w - v1.w * v2.y });
 }
-
-void		v4f_normalize(t_vector4f *vector)
-{
-	float length;
-
-	length = v4f_length(*vector);
-	vector->x /= length;
-	vector->y /= length;
-	vector->z /= length;
-	vector->w /= length;
-}

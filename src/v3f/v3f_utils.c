@@ -27,3 +27,13 @@ t_vector3f	v3f_lerp(t_vector3f v1, t_vector3f v2, float lerp_factor)
 	tmp.z *= lerp_factor;
 	return (v3f_add(tmp, v1));
 }
+
+void		v3f_normalize(t_vector3f *vector)
+{
+	float length;
+
+	length = v3f_length(*vector);
+	vector->x /= length;
+	vector->y /= length;
+	vector->z /= length;
+}

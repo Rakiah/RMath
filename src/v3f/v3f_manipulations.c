@@ -35,16 +35,6 @@ t_vector3f	v3f_normalized(t_vector3f vector)
 	return (vector);
 }
 
-void		v3f_normalize(t_vector3f *vector)
-{
-	float length;
-
-	length = v3f_length(*vector);
-	vector->x /= length;
-	vector->y /= length;
-	vector->z /= length;
-}
-
 t_vector3f	v3f_rotate(t_vector3f vector, float angle)
 {
 	float rad;
