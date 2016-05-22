@@ -63,6 +63,7 @@ t_vector4f		*v4f_add_new(t_vector4f v1, t_vector4f v2);
 t_vector4f		*v4f_sub_new(t_vector4f v1, t_vector4f v2);
 t_vector4f		*v4f_mul_new(t_vector4f v1, t_vector4f v2);
 t_vector4f		*v4f_div_new(t_vector4f v1, t_vector4f v2);
+inline int		v4f_to_color(t_vector4f color);
 /*
 **	VECTOR3F METHODS
 */
@@ -87,6 +88,7 @@ t_vector3f		*v3f_sub_new(t_vector3f v1, t_vector3f v2);
 t_vector3f		*v3f_mul_new(t_vector3f v1, t_vector3f v2);
 t_vector3f		*v3f_div_new(t_vector3f v1, t_vector3f v2);
 t_vector3f		v3f_cross(t_vector3f v1, t_vector3f v2);
+inline int		v3f_to_color(t_vector3f color);
 /*
 **	VECTOR2F METHODS
 */

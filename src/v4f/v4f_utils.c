@@ -40,3 +40,11 @@ void		v4f_normalize(t_vector4f *vector)
 	vector->z /= length;
 	vector->w /= length;
 }
+
+inline int	v4f_to_color(t_vector3f color)
+{
+	return (((unsigned char)(minf(color.w, 1.0f) * 255.0f) << 24) |
+			((unsigned char)(minf(color.x, 1.0f) * 255.0f) << 16) |
+			((unsigned char)(minf(color.y, 1.0f) * 255.0f) <<  8) |
+			((unsigned char)(minf(color.z, 1.0f) * 255.0f)      ));
+}
