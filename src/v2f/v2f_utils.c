@@ -27,3 +27,8 @@ t_vector2f	v2f_lerp(t_vector2f v1, t_vector2f v2, float l)
 	tmp = v2f_add(tmp, v1);
 	return (tmp);
 }
+
+t_vector2f	v2f_negative(t_vector2f v)
+{
+	return ((t_vector2f) { -v.x, -v.y });
+}

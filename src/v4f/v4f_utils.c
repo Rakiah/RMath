@@ -30,6 +30,11 @@ t_vector4f	v4f_lerp(t_vector4f v1, t_vector4f v2, float lerp_factor)
 	return (tmp);
 }
 
+t_vector4f	v4f_negative(t_vector4f v)
+{
+	return ((t_vector4f) { -v.x, -v.y, -v.z, -v.w });
+}
+
 void		v4f_normalize(t_vector4f *vector)
 {
 	float length;
@@ -41,7 +46,7 @@ void		v4f_normalize(t_vector4f *vector)
 	vector->w /= length;
 }
 
-inline int	v4f_to_color(t_vector3f color)
+inline int	v4f_to_color(t_vector4f color)
 {
 	return (((unsigned char)(minf(color.w, 1.0f) * 255.0f) << 24) |
 			((unsigned char)(minf(color.x, 1.0f) * 255.0f) << 16) |
