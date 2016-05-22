@@ -110,5 +110,12 @@ t_vector2f		*v2f_add_new(t_vector2f v1, t_vector2f v2);
 t_vector2f		*v2f_sub_new(t_vector2f v1, t_vector2f v2);
 t_vector2f		*v2f_mul_new(t_vector2f v1, t_vector2f v2);
 t_vector2f		*v2f_div_new(t_vector2f v1, t_vector2f v2);
+/*
+**	UTILS METHODS
+*/
+inline float	minf(float a, float b);
+inline int		mini(int a, int b);
+inline float	maxf(float a, float b);
+inline int		maxi(int a, int b);
 
 #endif
