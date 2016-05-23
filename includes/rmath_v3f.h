@@ -13,6 +13,12 @@
 #ifndef RMATH_V3F_H
 # define RMATH_V3F_H
 
+# include <math.h>
+# include <stdlib.h>
+# include "rmath_utils.h"
+# include "rmath_typedefs.h"
+# include "rmath_structs.h"
+
 float			v3f_length(t_vector3f vector);
 float			v3f_dot(t_vector3f v1, t_vector3f v2);
 void			v3f_normalize(t_vector3f *vector);

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rmath_utils.h                                        :+:      :+:    :+:   */
+/*   rmath_utils.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,6 +12,11 @@
 
 #ifndef RMATH_UTILS_H
 # define RMATH_UTILS_H
+
+# include <stdlib.h>
+# include "rmath_typedefs.h"
+# include "rmath_structs.h"
+# define PI 3.14159265358979323846
 
 inline float	minf(float a, float b);
 inline int		mini(int a, int b);

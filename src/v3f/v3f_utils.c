@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rmath.h"
+#include "rmath_v3f.h"
 
 t_vector3f	*v3f_new_cpy(t_vector3f *src)
 {

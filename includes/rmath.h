@@ -13,11 +13,6 @@
 #ifndef RMATH_H
 # define RMATH_H
 
-# include <math.h>
-# include <stdlib.h>
-# include "rmath_typedefs.h"
-# include "rmath_structs.h"
-# define PI 3.14159265358979323846
 # include "rmath_utils.h"
 # include "rmath_v2f.h"
 # include "rmath_v3f.h"

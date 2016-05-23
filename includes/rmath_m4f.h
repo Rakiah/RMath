@@ -13,6 +13,12 @@
 #ifndef RMATH_M4F_H
 # define RMATH_M4F_H
 
+# include <math.h>
+# include <stdlib.h>
+# include "rmath_utils.h"
+# include "rmath_typedefs.h"
+# include "rmath_structs.h"
+
 void			m4f_identity(t_matrix4f *matrix);
 void			m4f_translate(t_matrix4f *matrix, t_vector3f t);
 void			m4f_rotate(t_matrix4f *matrix, t_vector3f r);

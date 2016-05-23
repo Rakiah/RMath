@@ -13,6 +13,12 @@
 #ifndef RMATH_V2F_H
 # define RMATH_V2F_H
 
+# include <math.h>
+# include <stdlib.h>
+# include "rmath_utils.h"
+# include "rmath_typedefs.h"
+# include "rmath_structs.h"
+
 float			v2f_length(t_vector2f vector);
 float			v2f_dot(t_vector2f v1, t_vector2f v2);
 void			v2f_normalize(t_vector2f *vector);

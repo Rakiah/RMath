@@ -13,6 +13,12 @@
 #ifndef RMATH_V4F_H
 # define RMATH_V4F_H
 
+# include <math.h>
+# include <stdlib.h>
+# include "rmath_utils.h"
+# include "rmath_typedefs.h"
+# include "rmath_structs.h"
+
 float			v4f_length(t_vector4f vector);
 float			v4f_dot(t_vector4f v1, t_vector4f v2);
 float			v4f_get_at(t_vector4f v, int index);
