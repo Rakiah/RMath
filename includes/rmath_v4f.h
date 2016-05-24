@@ -6,7 +6,7 @@
 /*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/18 17:10:22 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/03/23 13:04:14 by bkabbas          ###   ########.fr       */
+/*   Updated: 2016/05/24 11:05:39 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ t_vector4f		*v4f_add_new(t_vector4f v1, t_vector4f v2);
 t_vector4f		*v4f_sub_new(t_vector4f v1, t_vector4f v2);
 t_vector4f		*v4f_mul_new(t_vector4f v1, t_vector4f v2);
 t_vector4f		*v4f_div_new(t_vector4f v1, t_vector4f v2);
-inline int		v4f_to_color(t_vector4f color);
+ int		v4f_to_color(t_vector4f color);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/01/13 02:50:42 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/01/13 02:52:57 by bkabbas          ###   ########.fr       */
+/*   Updated: 2016/05/24 11:03:32 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ void		v3f_normalize(t_vector3f *vector)
 }
 
 
-inline int	v3f_to_color(t_vector3f color)
+int	v3f_to_color(t_vector3f color)
 {
 	return ((255 << 24) |
 			((unsigned char)(minf(color.x, 1.0f) * 255.0f) << 16) |
