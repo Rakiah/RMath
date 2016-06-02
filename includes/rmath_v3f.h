@@ -31,7 +31,7 @@
 
 float			v3f_length(t_vector3f vector);
 float			v3f_dot(t_vector3f v1, t_vector3f v2);
-void			v3f_normalize(t_vector3f *vector);
+float			v3f_distance(t_vector3f v1, t_vector3f v2);
 t_vector3f		v3f_normalized(t_vector3f vector);
 t_vector3f		v3f_rotate(t_vector3f vector, float angle);
 t_vector3f		v3f_add(t_vector3f v1, t_vector3f v2);
