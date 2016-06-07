@@ -19,15 +19,15 @@
 # include "rmath_typedefs.h"
 # include "rmath_structs.h"
 
-# define V4F_INIT(x, y, z, w)	(t_vector4f) { x, y, z, w };
-# define V4F_ZERO				(t_vector4f) { +0, +0, +0, +0 };
-# define V4F_ONE				(t_vector4f) { +1, +1, +1, +1 };
-# define V4F_FORWARD			(t_vector4f) { +0, +0, +1, +1 };
-# define V4F_BACK				(t_vector4f) { +0, +0, -1, +1 };
-# define V4F_UP					(t_vector4f) { +0, +1, +0, +1 };
-# define V4F_DOWN				(t_vector4f) { +0, -1, +0, +1 };
-# define V4F_RIGHT				(t_vector4f) { +1, +0, +0, +1 };
-# define V4F_LEFT				(t_vector4f) { -1, +0, +0, +1 };
+# define V4F_INIT(x, y, z, w)	(t_vector4f) { x, y, z, w }
+# define V4F_ZERO				(t_vector4f) { +0, +0, +0, +0 }
+# define V4F_ONE				(t_vector4f) { +1, +1, +1, +1 }
+# define V4F_FORWARD			(t_vector4f) { +0, +0, +1, +1 }
+# define V4F_BACK				(t_vector4f) { +0, +0, -1, +1 }
+# define V4F_UP					(t_vector4f) { +0, +1, +0, +1 }
+# define V4F_DOWN				(t_vector4f) { +0, -1, +0, +1 }
+# define V4F_RIGHT				(t_vector4f) { +1, +0, +0, +1 }
+# define V4F_LEFT				(t_vector4f) { -1, +0, +0, +1 }
 
 float			v4f_length(t_vector4f vector);
 float			v4f_dot(t_vector4f v1, t_vector4f v2);

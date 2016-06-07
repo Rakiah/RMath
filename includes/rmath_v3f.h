@@ -19,15 +19,15 @@
 # include "rmath_typedefs.h"
 # include "rmath_structs.h"
 
-# define V3F_INIT(x, y, z)	(t_vector3f) { x, y, z };
-# define V3F_ZERO			(t_vector3f) { +0, +0, +0 };
-# define V3F_ONE			(t_vector3f) { +1, +1, +1 };
-# define V3F_FORWARD		(t_vector3f) { +0, +0, +1 };
-# define V3F_BACK			(t_vector3f) { +0, +0, -1 };
-# define V3F_UP				(t_vector3f) { +0, +1, +0 };
-# define V3F_DOWN			(t_vector3f) { +0, -1, +0 };
-# define V3F_RIGHT			(t_vector3f) { +1, +0, +0 };
-# define V3F_LEFT			(t_vector3f) { -1, +0, +0 };
+# define V3F_INIT(x, y, z)	(t_vector3f) { x, y, z }
+# define V3F_ZERO			(t_vector3f) { +0, +0, +0 }
+# define V3F_ONE			(t_vector3f) { +1, +1, +1 }
+# define V3F_FORWARD		(t_vector3f) { +0, +0, +1 }
+# define V3F_BACK			(t_vector3f) { +0, +0, -1 }
+# define V3F_UP				(t_vector3f) { +0, +1, +0 }
+# define V3F_DOWN			(t_vector3f) { +0, -1, +0 }
+# define V3F_RIGHT			(t_vector3f) { +1, +0, +0 }
+# define V3F_LEFT			(t_vector3f) { -1, +0, +0 }
 
 float			v3f_length(t_vector3f vector);
 float			v3f_dot(t_vector3f v1, t_vector3f v2);
