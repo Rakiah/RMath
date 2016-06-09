@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   v2f_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/13 02:44:49 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/01/13 02:47:18 by bkabbas          ###   ########.fr       */
+/*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
+/*   Updated: 2016/06/09 23:43:34 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rmath_v2f.h"
-
-t_vector2f	*v2f_new_cpy(t_vector2f *src)
-{
-	return (v2f_new(src->x, src->y));
-}
 
 t_vector2f	v2f_lerp(t_vector2f v1, t_vector2f v2, float l)
 {
@@ -28,7 +23,7 @@ t_vector2f	v2f_lerp(t_vector2f v1, t_vector2f v2, float l)
 	return (tmp);
 }
 
-t_vector2f	v2f_negative(t_vector2f v)
+t_vector2f	v2f_opposite(t_vector2f v)
 {
 	return ((t_vector2f) { -v.x, -v.y });
 }

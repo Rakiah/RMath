@@ -3,26 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   v3f_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/13 02:50:42 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/05/24 14:58:15 by bkabbas          ###   ########.fr       */
+/*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
+/*   Updated: 2016/06/09 23:51:02 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rmath_v3f.h"
-
-t_vector3f	*v3f_new_cpy(t_vector3f *src)
-{
-	return (v3f_new(src->x, src->y, src->z));
-}
 
 t_vector3f	v3f_lerp(t_vector3f v1, t_vector3f v2, float lerp_factor)
 {
 	return (v3f_add(v3f_mul_float(v3f_sub(v2, v1), lerp_factor), v1));
 }
 
-t_vector3f	v3f_negative(t_vector3f v)
+t_vector3f	v3f_opposite(t_vector3f v)
 {
 	return ((t_vector3f) { -v.x, -v.y, -v.z });
 }

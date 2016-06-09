@@ -3,19 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   v4f_utils.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/13 02:53:47 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/05/24 13:44:48 by bkabbas          ###   ########.fr       */
+/*   Created: 2016/06/09 23:43:26 by Rakiah            #+#    #+#             */
+/*   Updated: 2016/06/09 23:59:52 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "rmath_v4f.h"
-
-t_vector4f	*v4f_new_cpy(t_vector4f *src)
-{
-	return (v4f_new(src->x, src->y, src->z, src->w));
-}
 
 t_vector4f	v4f_lerp(t_vector4f v1, t_vector4f v2, float lerp_factor)
 {
@@ -30,23 +25,12 @@ t_vector4f	v4f_lerp(t_vector4f v1, t_vector4f v2, float lerp_factor)
 	return (tmp);
 }
 
-t_vector4f	v4f_negative(t_vector4f v)
+t_vector4f	v4f_opposite(t_vector4f v)
 {
 	return ((t_vector4f) { -v.x, -v.y, -v.z, -v.w });
 }
 
-void		v4f_normalize(t_vector4f *vector)
-{
-	float length;
-
-	length = v4f_length(*vector);
-	vector->x /= length;
-	vector->y /= length;
-	vector->z /= length;
-	vector->w /= length;
-}
-
-inline int	v4f_to_color(t_vector4f color)
+int			v4f_to_color(t_vector4f color)
 {
 	return (((unsigned char)(minf(color.w, 1.0f) * 255.0f) << 24) |
 			((unsigned char)(minf(color.x, 1.0f) * 255.0f) << 16) |

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   v2f_manipulations.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/13 02:33:10 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/01/19 08:07:36 by bkabbas          ###   ########.fr       */
+/*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
+/*   Updated: 2016/06/09 23:43:34 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,15 +30,6 @@ t_vector2f	v2f_normalized(t_vector2f vector)
 	vector.x /= length;
 	vector.y /= length;
 	return (vector);
-}
-
-void		v2f_normalize(t_vector2f *vector)
-{
-	float length;
-
-	length = v2f_length(*vector);
-	vector->x /= length;
-	vector->y /= length;
 }
 
 t_vector2f	v2f_rotate(t_vector2f vector, float angle)

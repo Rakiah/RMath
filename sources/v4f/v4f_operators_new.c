@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ternaries.c                                        :+:      :+:    :+:   */
+/*   v4f_operators_new.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/01/13 04:04:35 by bkabbas           #+#    #+#             */
-/*   Updated: 2016/05/24 11:04:34 by bkabbas          ###   ########.fr       */
+/*   Created: 2016/06/09 23:43:26 by Rakiah            #+#    #+#             */
+/*   Updated: 2016/06/10 00:00:00 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rmath_utils.h"
+#include "rmath_v4f.h"
 
-float	minf(float a, float b)
+t_vector4f	*v4f_new(float x, float y, float z, float w)
 {
-	return (a < b ? a : b);
-}
+	t_vector4f	*ret;
 
-int		mini(int a, int b)
-{
-	return (a > b ? a : b);
-}
-
-float	maxf(float a, float b)
-{
-	return (a > b ? a : b);
-}
-
-int		maxi(int a, int b)
-{
-	return (a < b ? a : b);
+	ret = (t_vector4f *)malloc(sizeof(t_vector4f));
+	(*ret) = V4F_INIT(x, y, z, w);
+	return (ret);
 }
