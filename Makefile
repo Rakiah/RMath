@@ -6,14 +6,14 @@
 #    By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/18 21:24:52 by bkabbas           #+#    #+#              #
-#    Updated: 2016/06/13 19:46:14 by Rakiah           ###   ########.fr        #
+#    Updated: 2016/06/22 20:09:27 by Rakiah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = librmath.a
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -fsanitize=address
+CFLAGS = -Wall -Wextra -Werror
 OPTIMIZE = yes
 PROF = no
 DEBUG = no

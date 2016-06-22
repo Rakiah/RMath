@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/10 00:21:06 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/06/22 20:08:45 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include "rmath_typedefs.h"
 # include "rmath_structs.h"
 # define PI 3.14159265358979323846
-# define POW2(x) x * x
+# define POW2(x) (x) * (x)
 
 /*
 **		Return the minimum value between "a" and "b"

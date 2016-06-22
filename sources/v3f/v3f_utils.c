@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/09 23:51:02 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/06/22 20:09:07 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,7 @@ t_vector3f	v3f_opposite(t_vector3f v)
 
 float		v3f_distance(t_vector3f v1, t_vector3f v2)
 {
-	return (sqrtf(POW2(v2.x - v1.x) +
-				POW2(v2.y - v1.y) +
-				POW2(v2.z - v1.z)));
+	return (sqrtf(POW2(v2.x - v1.x) + POW2(v2.y - v1.y) + POW2(v2.z - v1.z)));
 }
 
 int			v3f_to_color(t_vector3f color)
