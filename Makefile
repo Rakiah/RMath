@@ -6,7 +6,7 @@
 #    By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/01/18 21:24:52 by bkabbas           #+#    #+#              #
-#    Updated: 2016/06/22 20:09:27 by Rakiah           ###   ########.fr        #
+#    Updated: 2016/06/29 00:01:36 by Rakiah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,31 +44,31 @@ CFLAGS += -I
 vpath %.c $(addprefix $(PATH_SRC)/,$(PATH_SUB))
 
 # Sources
-M4F = m4f_manipulations.c \
-      m4f_operators.c \
-      m4f_adjugate.c \
-      m4f_initializers.c
+M4F += m4f_manipulations.c
+M4F += m4f_operators.c
+M4F += m4f_adjugate.c
+M4F += m4f_initializers.c
 
-V4F = v4f_manipulations.c \
-      v4f_operators.c \
-      v4f_operators_new.c \
-      v4f_operators_float.c \
-      v4f_utils.c
+V4F += v4f_manipulations.c
+V4F += v4f_operators.c
+V4F += v4f_operators_new.c
+V4F += v4f_operators_float.c
+V4F += v4f_utils.c
 
-V3F = v3f_manipulations.c \
-      v3f_operators.c \
-      v3f_operators_new.c \
-      v3f_operators_float.c \
-      v3f_utils.c
+V3F += v3f_manipulations.c
+V3F += v3f_operators.c
+V3F += v3f_operators_new.c
+V3F += v3f_operators_float.c
+V3F += v3f_utils.c
 
-V2F = v2f_manipulations.c \
-      v2f_operators.c \
-      v2f_operators_new.c \
-      v2f_operators_float.c \
-      v2f_utils.c
+V2F += v2f_manipulations.c
+V2F += v2f_operators.c
+V2F += v2f_operators_new.c
+V2F += v2f_operators_float.c
+V2F += v2f_utils.c
 
-UTILS = ternaries.c \
-		clamps.c
+UTILS += ternaries.c
+UTILS += clamps.c
 
 SOURCES += $(M4F)
 SOURCES += $(V4F)
@@ -86,7 +86,7 @@ INCLUDES += rmath_v2f.h
 INCLUDES += rmath_m4f.h
 
 # Headers
-HEADERS = $(addprefix $(PATH_HEADERS)/, $(INCLUDES))
+HEADERS += $(addprefix $(PATH_HEADERS)/, $(INCLUDES))
 
 # Objects
 OBJECTS += $(addprefix $(PATH_OBJ)/, $(M4F:%.c=%.o))
@@ -98,7 +98,7 @@ OBJECTS += $(addprefix $(PATH_OBJ)/, $(UTILS:%.c=%.o))
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar rcs $(NAME) $(OBJECTS)
+	@ar rcs $(NAME) $(OBJECTS)
 	@echo library linked correctly
 
 $(OBJECTS): $(HEADERS) | $(PATH_OBJ)
