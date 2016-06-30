@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/30 12:02:27 by bkabbas          ###   ########.fr       */
+/*   Updated: 2016/06/30 14:11:41 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,6 @@ t_vector3f		*v3f_new(float x, float y, float z);
 /*
 **	Return a color (as an int) based "v"
 **	Components of "v" are clamped from 0 to 1 and represent R,G,B values
-**
 */
 int				v3f_to_color(t_vector3f v);
 
