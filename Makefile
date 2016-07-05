@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: bkabbas <marvin@42.fr>                     +#+  +:+       +#+         #
+#    By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2016/01/18 21:24:52 by bkabbas           #+#    #+#              #
-#    Updated: 2016/06/29 00:01:36 by Rakiah           ###   ########.fr        #
+#    Created: 2016/06/29 00:09:59 by Rakiah            #+#    #+#              #
+#    Updated: 2016/07/05 17:01:14 by Rakiah           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ ifeq ($(OPTIMIZE), yes)
 	CFLAGS += -O3
 endif
 
-CFLAGS += -I
+CFLAGS += -I $(PATH_HEADERS)
 
 vpath %.c $(addprefix $(PATH_SRC)/,$(PATH_SUB))
 
@@ -103,7 +103,7 @@ $(NAME): $(OBJECTS)
 
 $(OBJECTS): $(HEADERS) | $(PATH_OBJ)
 $(OBJECTS): $(PATH_OBJ)/%.o: %.c
-	$(CC) $(CFLAGS) $(PATH_HEADERS) -o $@ -c $<
+	$(CC) $(CFLAGS) -o $@ -c $<
 
 $(PATH_OBJ):
 	@-mkdir -p $@
