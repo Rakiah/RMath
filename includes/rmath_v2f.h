@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/10 00:03:37 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/06/30 11:59:11 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,7 +81,7 @@ t_vector2f		v2f_add_float(t_vector2f v1, float val);
 t_vector2f		v2f_sub_float(t_vector2f v1, float val);
 
 /*
-**	Return the result of the multiplication between components from "v1" with "val"
+**	Return the result of the multiplication between "v1" and "val"
 */
 t_vector2f		v2f_mul_float(t_vector2f v1, float val);
 

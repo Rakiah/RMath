@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/10 00:05:46 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/06/30 12:02:42 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@
 # define V4F_DOWN				(t_vector4f) { +0, -1, +0, +1 }
 # define V4F_RIGHT				(t_vector4f) { +1, +0, +0, +1 }
 # define V4F_LEFT				(t_vector4f) { -1, +0, +0, +1 }
-
 
 /*
 **	Return the length of "vector"
@@ -84,7 +83,7 @@ t_vector4f		v4f_add_float(t_vector4f v1, float val);
 t_vector4f		v4f_sub_float(t_vector4f v1, float val);
 
 /*
-**	Return the result of the multiplication between components from "v1" with "val"
+**	Return the result of the multiplication from "v1" and "val"
 */
 t_vector4f		v4f_mul_float(t_vector4f v1, float val);
 
@@ -115,8 +114,7 @@ t_vector4f		*v4f_new(float x, float y, float z, float w);
 
 /*
 **	Return a color (as an int) based "v"
-**	Components of "v" are clamped from 0 to 1 and represent A,R,G,B values
-**	
+**	Components of "v" are clamped from 0 to 1 and represent A,R,G,B
 */
 int				v4f_to_color(t_vector4f color);
 
