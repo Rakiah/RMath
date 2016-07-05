@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:26 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/10 00:00:00 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/05 18:04:35 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,9 @@ t_vector4f	*v4f_new(float x, float y, float z, float w)
 	t_vector4f	*ret;
 
 	ret = (t_vector4f *)malloc(sizeof(t_vector4f));
-	(*ret) = V4F_INIT(x, y, z, w);
+	ret->x = x;
+	ret->y = y;
+	ret->z = z;
+	ret->w = w;
 	return (ret);
 }
