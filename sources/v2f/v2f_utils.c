@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/05 19:18:52 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/05 19:24:14 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 t_vector2f	v2f_lerp(t_vector2f v1, t_vector2f v2, float lerp_factor)
 {
-	return (v2f_add(v2f_mul_float(v2f_sub(v2, v1), lerp_factor)));
+	return (v2f_add(v2f_mul_float(v2f_sub(v2, v1), lerp_factor), v1));
 }
 
 t_vector2f	v2f_opposite(t_vector2f v)
