@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/05 21:48:18 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/06 17:23:19 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,6 @@ t_matrix4f	*m4f_mul_new(t_matrix4f *m1, t_matrix4f *m2)
 	int			y;
 
 	x = 0;
-	y = 0;
 	new = m4f_new();
 	while (x < 4)
 	{
