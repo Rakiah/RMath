@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/10 00:18:46 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/06 22:51:27 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,11 +67,6 @@ void			m4f_adjugate(t_matrix4f *m);
 **	Invert "m"
 */
 void			m4f_invert(t_matrix4f *m);
-
-/*
-**	Return "dst", copied from src
-*/
-t_matrix4f		*m4f_cpy(t_matrix4f *dst, t_matrix4f *src);
 
 /*
 **	Return "dst", multiplied by "src"

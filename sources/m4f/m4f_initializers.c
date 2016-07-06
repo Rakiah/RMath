@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/09 23:43:34 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/06 22:54:31 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,8 @@ void	m4f_rotate(t_matrix4f *matrix, t_vector3f r)
 	rz.m[0][1] = -(float)sin(r.z);
 	rz.m[1][0] = (float)sin(r.z);
 	rz.m[1][1] = (float)cos(r.z);
-	m4f_cpy(matrix, m4f_mul(&rz, m4f_mul(&ry, &rx)));
+	m4f_mul(&rz, m4f_mul(&ry, &rx));
+	*matrix = rz;
 }
 
 void	m4f_perspective(t_matrix4f *m, float degfov,

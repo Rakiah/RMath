@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/09 23:43:34 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/06 22:52:53 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,5 +116,5 @@ void			m4f_adjugate(t_matrix4f *m)
 	m4f_adjugate_y(&b, m);
 	m4f_adjugate_z(&b, m);
 	m4f_adjugate_w(&b, m);
-	m4f_cpy(m, &b);
+	*m = b;
 }
