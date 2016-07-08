@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/09 23:59:57 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/08 21:14:32 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,14 +27,7 @@ float		v4f_dot(t_vector4f v1, t_vector4f v2)
 
 t_vector4f	v4f_normalized(t_vector4f vector)
 {
-	float length;
-
-	length = v4f_length(vector);
-	vector.x /= length;
-	vector.y /= length;
-	vector.z /= length;
-	vector.w /= length;
-	return (vector);
+	return (v4f_div_float(vector, v4f_length(vector)));
 }
 
 t_vector4f	v4f_rotate(t_vector4f vector, float angle)
@@ -53,8 +46,8 @@ t_vector4f	v4f_rotate(t_vector4f vector, float angle)
 
 t_vector4f	v4f_cross(t_vector4f v1, t_vector4f v2)
 {
-	return ((t_vector4f) {	v1.y * v2.z - v1.z * v2.y,
-							v1.z * v2.x - v1.x * v2.z,
-							v1.x * v2.y - v1.y * v2.x,
-							v1.y * v2.w - v1.w * v2.y });
+	return (V4F_INIT(v1.y * v2.z - v1.z * v2.y,
+					v1.z * v2.x - v1.x * v2.z,
+					v1.x * v2.y - v1.y * v2.x,
+					v1.y * v2.w - v1.w * v2.y));
 }

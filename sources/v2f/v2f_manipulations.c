@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/09 23:43:34 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/08 21:04:13 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,7 @@ float		v2f_dot(t_vector2f v1, t_vector2f v2)
 
 t_vector2f	v2f_normalized(t_vector2f vector)
 {
-	float length;
-
-	length = v2f_length(vector);
-	vector.x /= length;
-	vector.y /= length;
-	return (vector);
+	return (v2f_div_float(vector, v2f_length(vector)));
 }
 
 t_vector2f	v2f_rotate(t_vector2f vector, float angle)

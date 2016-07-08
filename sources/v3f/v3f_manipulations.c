@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/09 23:44:36 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/08 21:11:48 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,7 @@ float		v3f_dot(t_vector3f v1, t_vector3f v2)
 
 t_vector3f	v3f_normalized(t_vector3f vector)
 {
-	float length;
-
-	length = v3f_length(vector);
-	vector.x /= length;
-	vector.y /= length;
-	vector.z /= length;
-	return (vector);
+	return (v3f_div_float(vector, v3f_length(vector)));
 }
 
 t_vector3f	v3f_rotate(t_vector3f vector, float angle)
@@ -51,7 +45,7 @@ t_vector3f	v3f_rotate(t_vector3f vector, float angle)
 
 t_vector3f	v3f_cross(t_vector3f v1, t_vector3f v2)
 {
-	return ((t_vector3f) {	v1.y * v2.z - v1.z * v2.y,
-							v1.z * v2.x - v1.x * v2.z,
-							v1.x * v2.y - v1.y * v2.x });
+	return (V3F_INIT(v1.y * v2.z - v1.z * v2.y,
+					v1.z * v2.x - v1.x * v2.z,
+					v1.x * v2.y - v1.y * v2.x));
 }

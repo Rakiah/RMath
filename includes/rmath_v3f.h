@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/30 14:11:41 by bkabbas          ###   ########.fr       */
+/*   Updated: 2016/07/08 22:10:49 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,15 +22,15 @@
 /*
 ** Commons t_vector3f initializations
 */
-# define V3F_INIT(x, y, z)	(t_vector3f) { x, y, z }
-# define V3F_ZERO			(t_vector3f) { +0, +0, +0 }
-# define V3F_ONE			(t_vector3f) { +1, +1, +1 }
-# define V3F_FORWARD		(t_vector3f) { +0, +0, +1 }
-# define V3F_BACK			(t_vector3f) { +0, +0, -1 }
-# define V3F_UP				(t_vector3f) { +0, +1, +0 }
-# define V3F_DOWN			(t_vector3f) { +0, -1, +0 }
-# define V3F_RIGHT			(t_vector3f) { +1, +0, +0 }
-# define V3F_LEFT			(t_vector3f) { -1, +0, +0 }
+# define V3F_INIT(x, y, z)	(t_vector3f) { { (x), (y), (z) } }
+# define V3F_ZERO			(t_vector3f) { { +0, +0, +0 } }
+# define V3F_ONE			(t_vector3f) { { +1, +1, +1 } }
+# define V3F_FORWARD		(t_vector3f) { { +0, +0, +1 } }
+# define V3F_BACK			(t_vector3f) { { +0, +0, -1 } }
+# define V3F_UP				(t_vector3f) { { +0, +1, +0 } }
+# define V3F_DOWN			(t_vector3f) { { +0, -1, +0 } }
+# define V3F_RIGHT			(t_vector3f) { { +1, +0, +0 } }
+# define V3F_LEFT			(t_vector3f) { { -1, +0, +0 } }
 
 /*
 **	Return the length of "vector"

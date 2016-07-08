@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/30 11:59:11 by bkabbas          ###   ########.fr       */
+/*   Updated: 2016/07/08 22:10:06 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@
 /*
 ** Commons t_vector2f initializations
 */
-# define V2F_INIT(x, y)		(t_vector2f) { x, y }
-# define V2F_ZERO			(t_vector2f) { +0, +0 }
-# define V2F_ONE			(t_vector2f) { +1, +1 }
-# define V2F_UP				(t_vector2f) { +0, +1 }
-# define V2F_DOWN			(t_vector2f) { +0, -1 }
-# define V2F_RIGHT			(t_vector2f) { +1, +0 }
-# define V2F_LEFT			(t_vector2f) { -1, +0 }
+# define V2F_INIT(x, y)		(t_vector2f) { { (x), (y) } }
+# define V2F_ZERO			(t_vector2f) { { +0, .y = +0 } }
+# define V2F_ONE			(t_vector2f) { { +1, .y = +1 } }
+# define V2F_UP				(t_vector2f) { { +0, .y = +1 } }
+# define V2F_DOWN			(t_vector2f) { { +0, .y = -1 } }
+# define V2F_RIGHT			(t_vector2f) { { +1, .y = +0 } }
+# define V2F_LEFT			(t_vector2f) { { -1, .y = +0 } }
 
 /*
 **	Return the length of "vector"

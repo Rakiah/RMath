@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/06/22 20:09:07 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/08 21:10:57 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_vector3f	v3f_lerp(t_vector3f v1, t_vector3f v2, float lerp_factor)
 
 t_vector3f	v3f_opposite(t_vector3f v)
 {
-	return ((t_vector3f) { -v.x, -v.y, -v.z });
+	return (V3F_INIT(-v.x, -v.y, -v.z));
 }
 
 float		v3f_distance(t_vector3f v1, t_vector3f v2)

@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   v2f_operators_new.c                                :+:      :+:    :+:   */
+/*   unions_test.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/08 21:05:31 by Rakiah           ###   ########.fr       */
+/*   Created: 2016/07/08 21:41:09 by Rakiah            #+#    #+#             */
+/*   Updated: 2016/07/08 21:42:25 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "rmath_v2f.h"
-
-t_vector2f	*v2f_new(float x, float y)
+# include <stdio.h>
+# include <rmath.h>
+int main(void)
 {
-	t_vector2f	*ret;
+	t_vector4f test;
 
-	ret = (t_vector2f *)malloc(sizeof(t_vector2f));
-	ret->x = x;
-	ret->y = y;
-	return (ret);
+	test = V4F_INIT(55, 12, 44, 24);
+	printf("%f : %f : %f : %f\n", test.x, test.y, test.z, test.w);
+	return (0);
 }

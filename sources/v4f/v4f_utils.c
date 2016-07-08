@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:26 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/05 19:17:30 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/08 21:09:12 by Rakiah           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_vector4f	v4f_lerp(t_vector4f v1, t_vector4f v2, float lerp_factor)
 
 t_vector4f	v4f_opposite(t_vector4f v)
 {
-	return ((t_vector4f) { -v.x, -v.y, -v.z, -v.w });
+	return (V4F_INIT(-v.x, -v.y, -v.z, -v.w));
 }
 
 int			v4f_to_color(t_vector4f color)
