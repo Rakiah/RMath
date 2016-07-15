@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/08 22:16:11 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/15 11:47:05 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -105,21 +105,5 @@ union				u_matrix4f
 		t_vector4f rows[4];
 	};
 };
-
-
-//union				u_matrix4f
-//{
-	//struct
-	//{
-		//float m[4][4];
-	//};
-	//struct
-	//{
-		//t_vector4f row0;
-		//t_vector4f row1;
-		//t_vector4f row2;
-		//t_vector4f row3;
-	//};
-//};
 
 #endif

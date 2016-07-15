@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:24 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/09 02:30:02 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/15 11:54:21 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,12 +86,12 @@ t_matrix4f		*m4f_new();
 /*
 **	Return a dynamically allocated t_matrix4f initalized to r0, r1, r2, r3
 */
-t_matrix4f	*m4f_new_row(t_vector4f r0, t_vector4f r1,
-						t_vector4f r2, t_vector4f r3);
+t_matrix4f		*m4f_new_row(t_vector4f r0, t_vector4f r1,
+							t_vector4f r2, t_vector4f r3);
 
 /*
 **	Return the result of the multiplication of "m" with "v"
 */
-t_vector4f	m4f_mul_vector(t_matrix4f *m, t_vector4f v);
+t_vector4f		m4f_mul_vector(t_matrix4f *m, t_vector4f v);
 
 #endif

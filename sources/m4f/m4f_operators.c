@@ -6,7 +6,7 @@
 /*   By: Rakiah <bkabbas@student.42.fr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/06/09 23:43:25 by Rakiah            #+#    #+#             */
-/*   Updated: 2016/07/09 02:29:56 by Rakiah           ###   ########.fr       */
+/*   Updated: 2016/07/15 11:50:26 by bkabbas          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ t_matrix4f	*m4f_new(void)
 }
 
 t_matrix4f	*m4f_new_row(t_vector4f r0, t_vector4f r1,
-						t_vector4f r2, t_vector4f r3)
+							t_vector4f r2, t_vector4f r3)
 {
-	t_matrix4f *m = m4f_new();
+	t_matrix4f *m
 
+	m = m4f_new();
 	m->row0 = r0;
 	m->row1 = r1;
 	m->row2 = r2;
@@ -70,18 +71,18 @@ t_vector4f	m4f_mul_vector(t_matrix4f *m, t_vector4f v)
 
 t_matrix4f	*m4f_mul_new(t_matrix4f *m1, t_matrix4f *m2)
 {
-	t_matrix4f	*new;
+	t_matrix4f	*ret;
 	int			x;
 	int			y;
 
 	x = 0;
-	new = m4f_new();
+	ret = m4f_new();
 	while (x < 4)
 	{
 		y = 0;
 		while (y < 4)
 		{
-			new->m[x][y] = m1->m[x][0] * m2->m[0][y] +
+			ret->m[x][y] = m1->m[x][0] * m2->m[0][y] +
 							m1->m[x][1] * m2->m[1][y] +
 							m1->m[x][2] * m2->m[2][y] +
 							m1->m[x][3] * m2->m[3][y];
@@ -89,5 +90,5 @@ t_matrix4f	*m4f_mul_new(t_matrix4f *m1, t_matrix4f *m2)
 		}
 		x++;
 	}
-	return (new);
+	return (ret);
 }
