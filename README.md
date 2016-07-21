@@ -22,4 +22,7 @@ Review the code to check if something could be done better.
 Propose others usefull functions that should be here.
 
 If you did anything in this list please contact me at bkabbas@student.42.fr so
-I can add your changes and add you to the list of contributors :D
+I can add your changes and add you to the list of contributors :D.
+
+### Author ###
+Béranger "Rakiah" Kabbas.
